@@ -1,0 +1,321 @@
+/* styling the menu */
+body {
+    font-family: Arial, sans-serif;
+    background-color: blanchedalmond;
+}
+/* #menu{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+#menu ul li {
+    margin-right: 20px;
+}
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+#menu ul li a:hover {
+    background-color:white;
+    color: black;
+} */
+
+#menu {
+    background-color: #ffbf00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+  
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+#menu ul li {
+    margin-right: 20px;
+}
+
+#menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #ff8000;  
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+}
+
+#menu ul li a:hover {
+    background-color: #fff;
+    color: #ff8000;
+}
+
+/* #header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFACD;
+    height: 50px;
+    border-bottom: 2px solid #A0522D;
+  }
+  
+  .header_content {
+    font-size: 24px;
+    color: #A0522D;
+    display: flex;
+    align-items: center;
+  }
+  
+  #logo {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  #logo img {
+    height: 40px;
+    margin-left: 10px;
+  } */
+  
+  #header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFACD;
+    height: 50px;
+    border-bottom: 2px solid #A0522D;
+  }
+  
+  .header_content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header_content h2 {
+    font-size: 24px;
+    color: #A0522D;
+  }
+  
+  #logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  #logo img {
+    height: 40px;
+    margin-left: 10px;
+  }
+  
+  #logo span {
+    margin-right: 10px;
+  }
+
+
+footer {        
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    bottom: 0;
+    text-align: center;
+    background-color: DarkSalmon;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-size: 12px;
+    padding: 20px; /* Add padding for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+footer a {
+    color: black; /* Change link color to black */
+    text-decoration: none;
+    border-bottom: 2px solid black; /* Add bottom border to links */
+    padding-bottom: 2px; /* Add some spacing between the border and link text */
+    transition: border-bottom 0.3s ease-in-out; /* Add transition effect to border */
+}
+
+footer a:hover {
+    border-bottom: 2px solid #ffbf00; /* Change border color on hover */
+}
+
+
+
+    /* Style for the modal dialog */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    }
+      
+      /* Style for the modal content */
+.modal-content {
+    background-color: blanchedalmond;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+      }
+      
+      /* Style for the close button */
+.closeButton {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+      
+.closeButton:hover,
+.closeButton:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+#gameCanvas{
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+    margin-bottom: 5.46%;
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #f3e5ab;
+          
+}
+
+/* #header {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 34%;
+    
+  }
+  
+  #header header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  #header img {
+    height: 80px;
+    margin-right: 10px;
+  } */
+
+
+  #new-game-btn {
+    background-color: #ff9100;
+    border: 2px solid #ff9100;
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+  }
+  
+  #new-game-btn:hover {
+    background-color: #0099cc;
+    border-color: #0099cc;
+    color: #fff;
+    cursor: pointer;
+  }
+
+
+  input[type="button"] {
+    border-radius: 10px;
+    border: none;
+    padding: 12px 24px;
+    font-size: 20px;
+    background-color: #FFD700;
+    color: black;
+    text-shadow: 0px 1px 0px #000;
+    box-shadow: 0px 5px 0px #bfbfbf;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type="button"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 0px #bfbfbf;
+  }
+
+
+  /* .content {
+    position: relative;
+    height: 100%;
+  }
+  
+  .background-gif {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* adjust as needed */
+    /* height: 600%; /* adjust as needed */
+    /* background-image: url('resources/Images/chicken_welcome.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    animation: bg-animation 10s infinite;
+  } */
+  
+  /* @keyframes bg-animation {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 50% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  } */ 
+
+  .background-gif {
+    background-image: url('resources/Images/chicken_welcome.gif');
+    background-repeat: repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }

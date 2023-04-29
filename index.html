@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="shooting, spaceship, game, solo, fun">
+    <meta name="description" content="A space ship shooting game where the player must register first in order to track his scores">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="users.js" type="text/javascript"></script>
+    <script src="about.js" type="text/javascript"></script>
+    <script src="gameMode.js" type="text/javascript"></script>
+    <script src="switchPages.js" type="text/javascript"></script>
+    <script src="settings.js" type="text/javascript"></script>
+    <title>Chickens Revenge</title>
+</head>
+<body>
+    <!-- <div id="menu">
+        <nav>
+            <ul>
+                <li><a href="#welcome" onclick="showClickedPage('#welcome_page')">Home</a></li>
+                <li><a href="#settings" id="settings" onclick="showClickedPage('#settings_page')" style="display: none;">Settings</a></li>
+                <li><a href="#gamePage" id="gameScreen" onclick="play()" style="display: none;">Play</a></li>
+                <li><a href="#signup" onclick="showClickedPage('#signup_page')">Sign Up</a></li>
+                <li><a href="#signin" onclick="showClickedPage('#signin_page')">Sign In</a></li>
+                <li><a href="#about" id="aboutTab">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="header" style="text-align: center;">
+        <header style="justify-content: center;">
+            <h2 class="header_content">
+                Clucking Clucks
+                <img src="resources/Images/game_logo.png" style="height:75px;vertical-align: middle;border: 0;">
+                <br><class welcomeUser id="welcomeUser" style="color: crimson;"></class>
+            </h2>
+        </header>
+    </div> -->
+
+    <div>
+      <header id="header">
+        <div class="header_content">
+          <h2>Chickens Revenge</h2>
+          <div id="logo">
+            <span style="color: #A0522D;">|</span>
+            <img src="resources/Images/game_logo.png" alt="Game Logo">
+          </div>
+        </div>
+      </header>
+    </div>
+      
+    <div id="menu">
+        <nav>
+          <ul>
+            <li><a href="#welcome" onclick="showClickedPage('#welcome_page')">Home</a></li>
+            <li><a href="#settings" id="settings" onclick="showClickedPage('#settings_page')" style="display: none;">Settings</a></li>
+            <li><a href="#gamePage" id="gameScreen" onclick="play()" style="display: none;">Play</a></li>
+            <li><a href="#signup" onclick="showClickedPage('#signup_page')">Sign Up</a></li>
+            <li><a href="#signin" onclick="showClickedPage('#signin_page')">Sign In</a></li>
+            <li><a href="#about" id="aboutTab">About</a></li>
+          </ul>
+        </nav>
+    </div>
+
+      
+
+    <div id="content">
+        <div class="content" id="welcome_page" style="text-align: center;">
+            <div class="background-gif"></div>
+            <p><b>Daniel Kazakov 320569650</b></p>
+            <p><b>Itay Paikin 316424365</b></p>
+            <p>need to put link to website</p>
+            <br>
+            <input id = "Registration" type = "button" value = "Sign Up" onclick="location.href='#signup'; showClickedPage('#signup_page')">
+            <input id = "Login" type = "button" value = "Sign In" onclick="location.href='#signin'; showClickedPage('#signin_page')">
+            </br>
+        </div>
+        <!-- <div class="content" id="about_busa" style="text-align: center; display: none;">
+            kaki de kaka
+        </div> -->
+        <div class="content" id="settings_page" style="text-align:center ; display: none;">
+            <form id = "settingsForm" onsubmit="return false">
+                <h1>Settings</h1>
+                <div style="display:flex ; justify-content: center;">
+                    <table style="border:1;align-self: center;">
+                    <tr>
+                      <td style="padding-right:40px;"><b>Configure your chicken</b></td>
+                      <td style="padding-left:40px;"><b>choose your spaceship</b></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="chickenDefault" name="enemychicken" value="chicken" checked>
+                            <label for="chickenDefault"><img src='resources/Images/chicken.png'width="75" height="75"></label>
+                        </td>
+                        <td>
+                            <input type="radio" id="spaceshipDefault" name="herospaceship" value="spaceship" checked>
+                        <label for="spaceshipDefault"><img src='resources/Images/spaceship.png'width="75" height="75"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="evilchicken" name="enemychicken" value="evilchicken">
+                            <label for="evilchicken"><img src='resources/Images/evilchicken.png'width="75" height="75"></label>
+                        </td>
+                        <td>
+                            <input type="radio" id="greenspaceship" name="herospaceship" value="greenspaceship">
+                            <label for="greenspaceship"><img src='resources/Images/greenspaceship.png'width="75" height="75"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="redchicken" name="enemychicken" value="redchicken">
+                            <label for="redchicken"><img src='resources/Images/redchicken.png'width="75" height="75"></label>
+                        </td>
+                        <td>
+                            <input type="radio" id="coolspaceship" name="herospaceship" value="coolspaceship">
+                            <label for="coolspaceship"><img src='resources/Images/coolspaceship.png'width="75" height="75"></label>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td>
+                            <br>
+                            <br>
+                            <input type="number" id="gameTimer" name="gameTimer" min="2" max="10" value="5">
+                            <label for="gameTimer">Game Timer (in minutes):</label>
+                            <br>
+                            <br>
+                        </td>
+                    </tr> -->
+                  </table>
+                </div>
+                <br>
+                <label style="text-align: center;" for="gameTimer"><b>Game Timer (in minutes):</b></label>
+                <input type="number" id="gameTimer" name="gameTimer" min="2" max="10" value="5">
+                <br>
+                <br>
+                <b>Press any key to configure shooting button</b><br>
+                <input style="text-align: center;"type="text" id="shootKey" name="shootKey" maxlength="1">
+                <input type="submit" value="Submit" onclick="confirmSettingsAndStartGame()">
+            </form>
+        </div>
+        <div class="content" id="signup_page" style="text-align:center ; display: none;">
+            <form id = "registrationForm" onsubmit="addNewUser('#username', '#password', '#cPassword', '#email', '#firstname', '#lastname');return false">
+                <h1>Register</h1>
+                <p>Please register your personal information in order to play</p>
+
+                <label for="username" style="text-align:center"><b>Username</b></label><br>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="password" style="text-align:center"><b>Password</b></label><br>
+                <input type="password" id="password" name="password" style="margin-left: 37px;" required>
+                <img id="imgPassword" src="resources/Images/closedEyeLogo.png" style="height:30px;vertical-align: middle;" onclick="showPassword('#imgPassword','#password')"><br>
+                
+                <label for="cPassword" style="text-align:center"><b>Confirm Password</b></label><br>
+                <input type="password" id="cPassword" name="cPassword" style="margin-left: 37px;" required>
+                <img id="imgCpassword" src="resources/Images/closedEyeLogo.png" style="height:30px;vertical-align: middle;" onclick="showPassword('#imgCpassword','#cPassword')"><br>
+
+                <label for="firstname" style="text-align:center"><b>First Name</b></label><br>
+                <input type="text" id="firstname" name="firstname" required><br>
+
+                <label for="lastname" style="text-align:center"><b>Last Name</b></label><br>
+                <input type="text" id="lastname" name="lastname" required><br>
+
+                <label for="email" style="text-align:center"><b>Email</b></label><br>
+                <input type="text" id="email" name="email" required><br>
+
+                <label for="birthday" style="text-align:center"><b>Birthday</b></label><br>
+                <input type="date" id="birthday" name="birthday" onchange="checkValidDate()"required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="content" id="signin_page" style="text-align: center; display: none;">
+            <form onsubmit="signInUser('#userInput', '#passInput');return false">
+                <h1>Sign-in</h1>
+                <p>Please enter username and password in order to play</p>
+
+                <label for="userInput" style="text-align:center"><b>Username</b></label><br>
+                <input type="text" id="userInput" name="userInput" required><br>
+
+                <label for="passInput" style="text-align:center"><b>Password</b></label><br>
+                <input type="password" id="passInput" name="passInput" style="margin-left: 37px;" required>
+                <img id="imgPassInput" src="resources/Images/closedEyeLogo.png" style="height:30px;vertical-align: middle;" onclick="showPassword('#imgPassInput','#passInput')"><br>
+               
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <div class="content" id="gamePage" style="text-align:center ; display: none;">
+            <canvas id="gameCanvas" width="1407" height="737"></canvas>
+            <!-- <input id = "startNewGame" type = "button" value = "New Game" onclick="confirmSettingsAndStartGame()"> -->
+            <p><input id = "new-game-btn" type = "button" value = "New Game">
+            </p>
+        </div>
+    </div>
+    <!-- The Modal -->
+			<div id="modalDialog" class="modal">
+
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="closeButton">&times;</span>
+					<h1 style="text-align: center;">About</h1>
+					<br>Yo we are Daniel Kazakov and Itay Paikin.</br>
+					<br>We used JQuery in almos every process whether when we switch pages or start the game.
+                        getting input from the user and keeping the flow of the game.</br>
+					<br>
+						All these helped us to get the values from the DOM elements in a very easy way.
+					</br>
+					<br>
+						Obiviously we had several difficulties at the beginning of the development.
+                        We weren't familiar with javascript and html before this course so most of the time was spent
+                        on undestanding how to work with JQuery syntax and undestanding how the DOM and how to do visual pleasing
+                        elements when we are both (sadly) aren't so creative.
+                        most of the time spent on trying to align the elements together so it would look appeasing to the eye, working with css
+                        and creating the spaceships so they would look properly on screen
+                        
+					</br>
+                    <br>The project was incredibly challenging but we've learned a lot and we'll keep developing our skills in web development</br>
+				</div>
+			</div>
+
+    <div>
+        <footer>
+            <p><b>Chickens Revenge</b><br>
+                Register or Login and have fun! You can also go to settings to adjust the keys for the game<br>
+                <a href="mailto:kazadan@post.bgu.ac.il">Contact Daniel</a><br>
+                <a href="mailto:itaypai@post.bgu.ac.il">Contact Itay</a>
+        </footer>
+    </div>
+    <div></div>
+    <div></div>
+    <audio id="background_chicken_music" loop>
+        <source src="resources/Audio/sound_chicken-sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="background_game_mode_music" loop>
+        <source src="resources/Audio/game_mode_background_music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "bulletSound" preload = "auto">
+        <source src = "resources/Audio/spaceship_bullet.mp3" type = "audio/mpeg">
+    </audio>
+    <audio id = "chickenLaserSound" preload = "auto">
+        <source src = "resources/Audio/sound_laser.ogg" type = "audio/ogg">
+    </audio>
+    <audio id = "target_hit" preload = "auto">
+        <source src = "resources/Audio/sound_destroy.mp3" type = "audio/mpeg">
+    </audio>
+    <audio id = "spaceship_hit" preload = "auto">
+        <source src = "resources/Audio/spaceship_hit.mp3" type = "audio/mpeg">
+    </audio>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
