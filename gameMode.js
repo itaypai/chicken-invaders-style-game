@@ -51,11 +51,19 @@ let gameInterval;
 let accelerationInterval;
 let firstListener = true;
 let accelerationCount;
+let gamesHistory = [];
+let currentPlayer = null;
+
 
 
 //****************************************Start game************************************* */
 function startGame()
 {
+  if(currentPlayer == null || currentPlayer != currentUser){
+    currentPlayer = currentUser;
+    gamesHistory = [];
+  }
+
   gameOver = false;
   gameIsRunning = true;
   lives_counter = 3;
@@ -231,6 +239,7 @@ function update() {
 
   if (chickens.length == 0){
     gameIsRunning = false;
+    gamesHistory.push(gameScore);
     clearInterval(backgroundMusicInterval);
     clearInterval(accelerationInterval);
     stopBackgroundMusic();
@@ -242,14 +251,104 @@ function update() {
     ctx.shadowBlur = 5;
     ctx.lineWidth = 2;
     ctx.strokeStyle = "#ff0000";
-    ctx.strokeText("Champion!", canvas.width/2, canvas.height/2);
-    ctx.fillText("Champion!", canvas.width/2, canvas.height/2);
+    ctx.strokeText("Champion!", canvas.width/2, canvas.height/6);
+    ctx.fillText("Champion!", canvas.width/2, canvas.height/6);
     window.cancelAnimationFrame(gameInterval);
-  }
+    ctx.font = "bold 18px Arial";
+    ctx.strokeText("Games History:", 80, canvas.height / 6);
+    ctx.fillText("Games History:", 80, canvas.height / 6);
+    
+    // ctx.fillText("Games History:", 10, canvas.height/2);
+    // for (let i = 0; i < gamesHistory.length; i++) {
+    //   ctx.fillText("Game " + (i+1) + " score: " + gamesHistory[i], 10, canvas.height/2 + (i+1)*50);
+    // }
+
+    // // Display games history table
+    // ctx.font = "bold 16px Arial";
+    // ctx.fillStyle = "#ffffff";
+    // ctx.textAlign = "left";
+    // ctx.shadowColor = "none";
+    // ctx.shadowBlur = 0;
+
+    // // Sort games history by score
+    // gamesHistory.sort((a, b) => b - a);
+
+    // // Get the index of the current round
+    // let currentRoundIndex = gamesHistory.indexOf(gameScore);
+
+    // // Display table header
+    // ctx.strokeStyle = "#000000";
+    // ctx.lineWidth = 1;
+    // ctx.strokeText("Games History:", 10, canvas.height / 6);
+    // ctx.fillStyle = "#ffcc00";
+    // ctx.fillRect(10, canvas.height / 6 + 30, 400, 30);
+    // ctx.fillStyle = "#000000";
+    // ctx.fillText("Game", 15, canvas.height / 6 + 50);
+    // ctx.fillText("Score", 215, canvas.height / 6 + 50);
+
+    // // Display table rows
+    // for (let i = 0; i < gamesHistory.length; i++) {
+    //   if (i === currentRoundIndex) {
+    //     ctx.fillStyle = "#ff9933";
+    //     ctx.fillRect(10, canvas.height / 6 + 60 + i * 30, 400, 30);
+    //     ctx.fillStyle = "#000000";
+    //   } 
+    //   else {
+    //     ctx.fillStyle = "#ffffff";
+    //     ctx.strokeStyle = "#000000";
+    //     ctx.lineWidth = 1;
+    //     ctx.strokeText(i + 1, 15, canvas.height / 6 + 80 + i * 30);
+    //     ctx.strokeText(gamesHistory[i], 215, canvas.height / 6 + 80 + i * 30);
+    //   }
+    //   ctx.fillText(i + 1, 15, canvas.height / 6 + 80 + i * 30);
+    //   ctx.fillText(gamesHistory[i], 215, canvas.height / 6 + 80 + i * 30);
+    // }
+
+    // Display games history table
+    ctx.font = "bold 16px Arial";
+    ctx.fillStyle = "#ffffff";
+    ctx.textAlign = "left";
+    ctx.shadowColor = "none";
+    ctx.shadowBlur = 0;
+
+    // Sort games history by score
+    gamesHistory.sort((a, b) => b - a);
+
+    // Get the index of the current round
+    let currentRoundIndex = gamesHistory.indexOf(gameScore);
+
+    // Display table header
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 1;
+    
+    ctx.fillStyle = "#ffcc00";
+    ctx.fillRect(10, canvas.height / 6 + 30, 400, 30);
+    ctx.fillStyle = "#000000";
+    ctx.fillText("Game", 15, canvas.height / 6 + 50);
+    ctx.fillText("Score", 215, canvas.height / 6 + 50);
+
+    // Display table rows
+    for (let i = 0; i < gamesHistory.length; i++) {
+      if (i === currentRoundIndex) {
+        ctx.fillStyle = "#ff9933";
+        ctx.fillRect(10, canvas.height / 6 + 60 + i * 30, 400, 30);
+        ctx.fillStyle = "#000000";
+      } else {
+        ctx.fillStyle = "#ffffff";
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 2; // increase line width for the non-highlighted rows
+        ctx.strokeText(i + 1, 15, canvas.height / 6 + 80 + i * 30);
+        ctx.strokeText(gamesHistory[i], 215, canvas.height / 6 + 80 + i * 30);
+      }
+      ctx.fillText(i + 1, 15, canvas.height / 6 + 80 + i * 30);
+      ctx.fillText(gamesHistory[i], 215, canvas.height / 6 + 80 + i * 30);
+    }
+}
 
   if (lives_counter == 0) {
     gameIsRunning = false;
     gameOver = true;
+    gamesHistory.push(gameScore);
     clearInterval(backgroundMusicInterval);
     clearInterval(accelerationInterval);
     stopBackgroundMusic();
@@ -275,6 +374,11 @@ function update() {
     chickenGif.src = "resources/Images/chickens_won.gif";
     
     window.cancelAnimationFrame(gameInterval); 
+
+    ctx.fillText("Games History:", canvas.width/2, canvas.height/3);
+    for (let i = 0; i < gamesHistory.length; i++) {
+      ctx.fillText("Game " + (i+1) + " score: " + gamesHistory[i], canvas.width/2, canvas.height/3 + (i+1)*50);
+    }
   }
 
    currentTime = Date.now();
@@ -293,6 +397,7 @@ function update() {
       gameOverText = "Winner!";
     }
     gameIsRunning = false;
+    gamesHistory.push(gameScore);
     clearInterval(backgroundMusicInterval);
     clearInterval(accelerationInterval);
     stopBackgroundMusic();
@@ -309,6 +414,11 @@ function update() {
     ctx.strokeText("In this round your score is: " + gameScore, canvas.width/2, canvas.height/4);
     ctx.fillText("In this round your score is: " + gameScore, canvas.width/2, canvas.height/4);
     window.cancelAnimationFrame(gameInterval);
+
+    ctx.fillText("Games History:", canvas.width/2, canvas.height/3);
+    for (let i = 0; i < gamesHistory.length; i++) {
+      ctx.fillText("Game " + (i+1) + " score: " + gamesHistory[i], canvas.width/2, canvas.height/3 + (i+1)*50);
+    }
   }
 
 
