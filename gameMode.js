@@ -24,11 +24,7 @@ let spaceshipImage = new Image();
 
 let chickenImage = new Image();
 
-window.addEventListener('resize', function() {
-  if (window.innerWidth < 1366 || window.innerHeight < 768) {
-    window.resizeTo(1366, 768);
-  }
-});
+
 
 let canvas;
 let ctx;
