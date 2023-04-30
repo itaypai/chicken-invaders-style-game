@@ -3,34 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: blanchedalmond;
 }
-/* #menu{
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-#menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-#menu ul li {
-    margin-right: 20px;
-}
-#menu ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-#menu ul li a:hover {
-    background-color:white;
-    color: black;
-} */
+
 
 #menu {
     background-color: #ffbf00;

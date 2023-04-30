@@ -11,9 +11,6 @@ chickenBulletImage.src = 'resources/Images/fried_chicken.png';
 let heartImage = new Image();
 heartImage.src = 'resources/Images/heart.png';
 
-let emptyHeartImage = new Image();
-emptyHeartImage.src = 'resources/Images/empty_heart.png';
-
 var chickenGif = new Image();
 chickenGif.src = "resources/Images/chickens_won.gif";
 
