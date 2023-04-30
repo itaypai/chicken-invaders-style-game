@@ -13,4 +13,5 @@ you will go to the game window which will be launched with the settings you have
 On the game screen you will receive an indication about the number of lives left for the current round, the time remaining and the score you have accumulated so far. At the end of each round, the result you have accumulated will be displayed according to its position in the results table.
 <br>
 All that's left now is just to start and play.
+<br>
 Hope you enjoy!
