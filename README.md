@@ -4,7 +4,7 @@
 ## Welcome to our interpretation to the familiar spaceship game ##
 Names: Itay Paikin, Daniel Kazakov<br/>
 Id's: 316424365, 320569650<br/>
-github.io URL: https://web-development-environments-2023.github.io/assignment2-320569650_316424365/
+github.io URL: https://dannykazakov.github.io/chicken-invaders-website/
 
 After you go through the registration and login, the settings screen will appear
 where you can choose the type of spaceship and the chickens you will play with.
