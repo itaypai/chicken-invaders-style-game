@@ -5,6 +5,7 @@
 Names: Itay Paikin, Daniel Kazakov<br/>
 Id's: 316424365, 320569650<br/>
 github.io URL: https://dannykazakov.github.io/chicken-invaders-website/
+![image](https://github.com/DannyKazakov/chicken-invaders-website/assets/113122323/54556f5a-8709-4769-9482-e75aa78d37fd)
 
 After you go through the registration and login, the settings screen will appear
 where you can choose the type of spaceship and the chickens you will play with.
