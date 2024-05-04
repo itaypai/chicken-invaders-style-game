@@ -21,9 +21,10 @@ Utilizing HTML5 Canvas for rendering graphics and JavaScript for event handling,
 * fill all the necessary details as shown below:
   ![image](https://github.com/DannyKazakov/chicken-invaders-website/assets/113122323/959b18e8-c673-40ac-9479-18cd6614c228)
 * After you go through the registration and login, the settings screen will appear where you can choose the type of spaceship and the chickens you will play with.
+  
   ![image](https://github.com/DannyKazakov/chicken-invaders-website/assets/113122323/bb955aa7-386a-4d1b-9bd5-8a0b41fbebc8)
 * In addition, you will choose the timer for the game and the keyboard shot button. Immediately after that you will go to the game window which will be launched with the settings you have defined.
-* ![image](https://github.com/DannyKazakov/chicken-invaders-website/assets/113122323/ac2c53a6-395f-46f5-8f33-0b88ee368f36)
+  ![image](https://github.com/DannyKazakov/chicken-invaders-website/assets/113122323/ac2c53a6-395f-46f5-8f33-0b88ee368f36)
 
 ## How to Play
 
