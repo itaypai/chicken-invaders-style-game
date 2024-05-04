@@ -4,7 +4,7 @@
 ## Welcome to our interpretation to the familiar spaceship game ##
 Names: Itay Paikin, Daniel Kazakov<br/>
 Id's: 316424365, 320569650<br/>
-github.io URL: https://dannykazakov.github.io/chicken-invaders-website/
+github.io URL: https://dannykazakov.github.io/chicken-invaders-style-game/
 ![image](https://github.com/DannyKazakov/chicken-invaders-website/assets/113122323/54556f5a-8709-4769-9482-e75aa78d37fd)
 ## Intro
 During our 3rd year in the Software and Information Systems Engineering studies, I developed this game with the help of Itay Paikin.
