@@ -36,3 +36,9 @@ Utilizing HTML5 Canvas for rendering graphics and JavaScript for event handling,
 
 All that's left now is just to start and play.
 Hope you enjoy!
+## Contact
+
+### Daniel Kazakov
+* https://www.linkedin.com/in/danielkazakov/
+* Dannizakov@gmail.com
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
