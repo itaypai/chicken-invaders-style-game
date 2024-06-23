@@ -39,5 +39,5 @@ Hope you enjoy!
 ## Contact
 
 ### Itay Paikin
-* itayp95@gmail.com.com
+* itayp95@gmail.com
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
